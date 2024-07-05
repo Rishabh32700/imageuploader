@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #181818;
+}
+
+.App {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputContainer {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #181818;
+}
+
+input {
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  background-color: #181818;
+  color: white;
+}
+
+input[type="file" i]::-webkit-file-upload-button{
+  margin-right: 2rem;
+
+}
+
+button, input[type="file" i]::-webkit-file-upload-button {
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease-in-out;
+  background-color: #181818;
+  box-shadow: 15px 15px 38px 0px rgba(0, 0, 0, 0.5),
+    inset -8px -8px 16px 0px rgba(0, 0, 0, 0.6),
+    inset 0px 11px 28px 0px rgb(0, 0, 0);
+  color: white;
+
+}
+
+span{
+  border: 2px solid red;
+}
+
+button:hover,input[type="file" i]::-webkit-file-upload-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.imgMainContainer{
+  display:flex;
+  flex-wrap:wrap;
+   padding: 0 4px;
+}
+
+.imgContainer{
+  flex:25%;
+  max-width:25%;
+  padding: 0 4px;
+}
+
+img {
+  width: 100%;
+  margin: 4px auto;
+  vertical-align: middle
+}
+
+
+@media (max-width: 900px) {
+  .imgContainer {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+  }
+  .inputContainer{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .imgContainer {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+  }
+
+  .inputContainer{
+    flex-direction: column;
+  }
+}
